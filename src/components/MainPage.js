@@ -12,23 +12,20 @@ const MainPage = () => {
   if (error) return alert("Please try again after sometime.");
 
   return (
-    console.log(data.items[0].story.url),
-    (
-      <div>
-        <Grid container spacing={4}>
-          {data.items.map((item) => (
-            <Grid item xs={12} sm={6} md={3}>
-              <Card
-                descp={item.item.headline[0]}
-                image={item.story["hero-image-s3-key"]}
-                id={item.id}
-                url={item.story.url}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-    )
+    <div>
+      <Grid container spacing={4}>
+        {data.items.map((item) => (
+          <Grid item xs={12} sm={6} md={3}>
+            <Card
+              descp={item.item.headline[0]}
+              image={item.story["hero-image-s3-key"]}
+              id={item.id}
+              url={item.story.url}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 };
 export default MainPage;
