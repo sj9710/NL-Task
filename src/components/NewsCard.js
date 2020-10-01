@@ -43,7 +43,7 @@ export default function NewsCard({ descp, image, id, url }) {
 
   return (
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image={img} title="Paella dish" />
+      <CardMedia className={classes.media} image={img} />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           <a href={url} target="_blank" className={classes.link}>
